@@ -1,43 +1,69 @@
 package com.example.curriculumvitae;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
-import com.luseen.luseenbottomnavigation.BottomNavigation.BottomNavigationItem;
-import com.luseen.luseenbottomnavigation.BottomNavigation.BottomNavigationView;
-import com.luseen.luseenbottomnavigation.BottomNavigation.OnBottomNavigationItemClickListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 
 public class BerandaActivity extends AppCompatActivity {
 
+    private BerandaFragment berandaFragment;
+    private EducationFragment educationFragment;
+    private ProductFragment productFragment;
+    private SocialMediaFragment socialMediaFragment;
+    private FrameLayout mMainFrame;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beranda);
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigation);
+        berandaFragment = new BerandaFragment();
+        educationFragment = new EducationFragment();
+        productFragment = new ProductFragment();
+        socialMediaFragment = new SocialMediaFragment();
+        mMainFrame = findViewById(R.id.fragment_container);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        BottomNavigationItem bottomNavigationItem = new BottomNavigationItem
-                ("About Me", ContextCompat.getColor(this, R.color.backgroundnavyNavbar), R.drawable.man);
-        BottomNavigationItem bottomNavigationItem1 = new BottomNavigationItem
-                ("Product", ContextCompat.getColor(this, R.color.backgroundnavyNavbar), R.drawable.officedesk);
-        BottomNavigationItem bottomNavigationItem2 = new BottomNavigationItem
-                ("Education", ContextCompat.getColor(this, R.color.backgroundnavyNavbar), R.drawable.ic_school_black_24dp);
-        BottomNavigationItem bottomNavigationItem3 = new BottomNavigationItem
-                ("Social Media", ContextCompat.getColor(this, R.color.backgroundnavyNavbar), R.drawable.conversation);
-        bottomNavigationView.addTab(bottomNavigationItem);
-        bottomNavigationView.addTab(bottomNavigationItem1);
-        bottomNavigationView.addTab(bottomNavigationItem2);
-        bottomNavigationView.addTab(bottomNavigationItem3);
+        setFragment(berandaFragment);
 
-        bottomNavigationView.setOnBottomNavigationItemClickListener(new OnBottomNavigationItemClickListener() {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onNavigationItemClick(int index) {
-                Toast.makeText(BerandaActivity.this, "Item " +index +" clicked", Toast.LENGTH_SHORT).show();
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.nav_beranda:
+                        setFragment(berandaFragment);
+                        break;
+                    case R.id.nav_product:
+                        setFragment(productFragment);
+                        break;
+                    case R.id.nav_education:
+                        setFragment(educationFragment);
+                        break;
+                    case R.id.nav_sosmed:
+                        setFragment(socialMediaFragment);
+                        break;
+                }
+
+                return true;
             }
+
         });
 
+    }
+
+    private void setFragment(Fragment fragment) {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, fragment);
+        fragmentTransaction.commit();
     }
 }

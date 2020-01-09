@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,73 +8,38 @@
     tools:context=".BerandaActivity">
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_image"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="208dp"
-        android:src="@drawable/pasfoto"
-        app:civ_border_color="#fff"
-        app:civ_border_width="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <com.luseen.luseenbottomnavigation.BottomNavigation.BottomNavigationView
-        android:id="@+id/bottomNavigation"
+    <FrameLayout
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above ="@id/bottom_navigation"/>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id = "@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:bnv_shadow="true"
-        app:bnv_viewpager_slide="true"
-        app:bnv_with_text="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Richo Fedhia Saldhi"
-        android:textColor="@color/putih"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Freelance Developer"
-        android:textColor="@color/putih"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.064" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:background="@drawable/shape"
-        android:gravity="center"
-        android:text="About Me"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentBottom = "true"
+        app:menu = "@menu/bottom_navigation"
+        android:background = "@color/putih"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+<!--    <com.luseen.luseenbottomnavigation.BottomNavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottomNavigation"-->
+<!--        app:menu = "@menu/bottom_navigation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        app:bnv_shadow="true"-->
+<!--        app:bnv_viewpager_slide="true"-->
+<!--        app:bnv_with_text="false"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+
+</RelativeLayout>

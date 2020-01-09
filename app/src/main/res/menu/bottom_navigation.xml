@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/nav_beranda"
+        android:icon="@drawable/man"
+        android:title="About Me"/>
+
+    <item
+        android:id="@+id/nav_education"
+        android:icon="@drawable/ic_school_black_24dp"
+        android:title="Education"/>
+    <item
+        android:id="@+id/nav_product"
+        android:icon="@drawable/officedesk"
+        android:title="Product"/>
+    <item
+        android:id="@+id/nav_sosmed"
+        android:icon="@drawable/conversation"
+        android:title="Social Media"/>
+
+</menu>
