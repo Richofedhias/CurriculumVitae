@@ -34,7 +34,8 @@ ArrayList<ProductList> isiProductList;
     public void onBindViewHolder(@NonNull myViewHolder holder, int position) {
         holder.namaProduct.setText(isiProductList.get(position).getNamaProduct());
         holder.tahunProduct.setText(isiProductList.get(position).getTahunProduct());
-        holder.logo.setImageResource(isiProductList.get(position).gambarProduct);
+        holder.logo.setImageResource(isiProductList.get(position).getGambarProduct());
+        holder.jenisProduct.setText(isiProductList.get(position).getJenisProduct());
     }
 
     @Override
@@ -43,12 +44,13 @@ ArrayList<ProductList> isiProductList;
     }
 
      class myViewHolder extends RecyclerView.ViewHolder {
-        TextView namaProduct,tahunProduct;
+        TextView namaProduct,tahunProduct,jenisProduct;
         ImageView logo;
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
             namaProduct = itemView.findViewById(R.id.namaProduct);
             tahunProduct = itemView.findViewById(R.id.tahunProduct);
+            jenisProduct = itemView.findViewById(R.id.jenisProduct);
             logo = itemView.findViewById(R.id.gambarProduct);
         }
     }

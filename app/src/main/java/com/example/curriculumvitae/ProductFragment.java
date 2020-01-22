@@ -26,8 +26,8 @@ ArrayList<ProductList> listProduct = new ArrayList<>();
 View view;
 
     public ProductFragment() {
-        listProduct.add(new ProductList("I-Kampus","2019",R.drawable.officedesk));
-        listProduct.add(new ProductList("Sicoding","2019",R.drawable.penghargaan));
+        listProduct.add(new ProductList("I-Kampus","2019","Android Application",R.drawable.officedesk));
+        listProduct.add(new ProductList("Sicoding","2019","Android Application",R.drawable.penghargaan));
 
         listSkill.add(new SkillList("Java",R.drawable.officedesk));
         listSkill.add(new SkillList("Java",R.drawable.penghargaan));

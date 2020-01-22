@@ -1,12 +1,13 @@
 package com.example.curriculumvitae;
 
 public class ProductList {
-    String namaProduct,tahunProduct;
+    String namaProduct,tahunProduct,jenisProduct;
     int gambarProduct;
 
-    public ProductList(String namaProduct, String tahunProduct, int gambarProduct) {
+    public ProductList(String namaProduct, String tahunProduct, String jenisProduct, int gambarProduct) {
         this.namaProduct = namaProduct;
         this.tahunProduct = tahunProduct;
+        this.jenisProduct = jenisProduct;
         this.gambarProduct = gambarProduct;
     }
 
@@ -24,6 +25,14 @@ public class ProductList {
 
     public void setTahunProduct(String tahunProduct) {
         this.tahunProduct = tahunProduct;
+    }
+
+    public String getJenisProduct() {
+        return jenisProduct;
+    }
+
+    public void setJenisProduct(String jenisProduct) {
+        this.jenisProduct = jenisProduct;
     }
 
     public int getGambarProduct() {
