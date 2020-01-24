@@ -26,11 +26,22 @@ ArrayList<ProductList> listProduct = new ArrayList<>();
 View view;
 
     public ProductFragment() {
-        listProduct.add(new ProductList("I-Kampus","2019","Android Application",R.drawable.officedesk));
-        listProduct.add(new ProductList("Sicoding","2019","Android Application",R.drawable.penghargaan));
+        listProduct.add(new ProductList("TRASHCODE","2017","Website Application",R.drawable.logo));
+        listProduct.add(new ProductList("I-KAMPUS","2019","Android Application",R.drawable.ikampus));
+        listProduct.add(new ProductList("SICODING","2019","Android Application",R.drawable.sicoding));
 
-        listSkill.add(new SkillList("Java",R.drawable.officedesk));
-        listSkill.add(new SkillList("Java",R.drawable.penghargaan));
+
+        listSkill.add(new SkillList("HTML",R.drawable.html));
+        listSkill.add(new SkillList("CSS",R.drawable.css));
+        listSkill.add(new SkillList("BOOSTRAP",R.drawable.boostrap));
+        listSkill.add(new SkillList("MYSQL",R.drawable.mysql));
+        listSkill.add(new SkillList("JSON",R.drawable.json));
+        listSkill.add(new SkillList("FIREBASE",R.drawable.firebase));
+        listSkill.add(new SkillList("C",R.drawable.c));
+        listSkill.add(new SkillList("FLUTTER",R.drawable.flutter));
+        listSkill.add(new SkillList("JAVA",R.drawable.java));
+        listSkill.add(new SkillList("KOTLIN",R.drawable.kotlin));
+        listSkill.add(new SkillList("ADOBE XD",R.drawable.xd));
     }
 
     @Override

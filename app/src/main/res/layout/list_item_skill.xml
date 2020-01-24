@@ -33,10 +33,12 @@
             android:id="@+id/tV_namaSkill"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:layout_gravity="center"
+            android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

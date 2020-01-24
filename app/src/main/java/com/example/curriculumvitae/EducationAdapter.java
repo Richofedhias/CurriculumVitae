@@ -16,6 +16,11 @@ public class EducationAdapter extends RecyclerView.Adapter<EducationAdapter.myVi
     Context context;
     ArrayList<EducationList> isiEducationlist;
 
+    public EducationAdapter(Context context, ArrayList<EducationList> isiEducationlist) {
+        this.context = context;
+        this.isiEducationlist = isiEducationlist;
+    }
+
     @NonNull
     @Override
     public EducationAdapter.myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

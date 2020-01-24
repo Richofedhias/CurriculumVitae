@@ -70,7 +70,7 @@
             android:paddingRight="32dp"
             android:paddingBottom="8dp"
             android:text="2019"
-            android:textColor="#000" />
+            android:textColor="@color/putih" />
 
     </LinearLayout>
 

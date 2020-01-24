@@ -22,7 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom = "true"
         app:menu = "@menu/bottom_navigation"
-        android:background = "@color/putih"/>
+        app:itemIconTint="@color/putih"
+        android:background = "@color/backgroundnavyNavbar"/>
 
 
 
